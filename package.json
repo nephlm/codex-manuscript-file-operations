@@ -1,6 +1,6 @@
 {
   "name": "codex-manuscript-file-operations",
-  "displayName": "Codex Files By Number",
+  "displayName": "Codex Manuscript File Operations",
   "description": "A VSCode extension to help maintain an arbitrary order of files by using a numeric prefix.",
   "version": "0.2.2",
   "publisher": "ZenBrewismBooks",
