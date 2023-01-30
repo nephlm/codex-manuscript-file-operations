@@ -1,5 +1,5 @@
 
-# Codex Manuscript File Operations
+# <img src="https://raw.githubusercontent.com/nephlm/codex-manuscript-file-operations/main/logo_512.png" width=48px> Codex Manuscript File Operations
 
 A set of file operations to facilitate splitting and merging scenes and to maintaining the fileorder of the manuscript.
 
