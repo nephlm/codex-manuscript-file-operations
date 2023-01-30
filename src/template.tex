@@ -1,0 +1,128 @@
+\documentclass[12pt,twoside]{book}
+
+\usepackage[paperwidth=6in,paperheight=9in,top=0.75in,bottom=0.75in,left=0.5in,right=0.5in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\textbf{\rightmark}}
+\fancyhead[LO,RE]{\textbf{\leftmark}}
+\fancyfoot[C]{\thepage}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\usepackage{parskip}
+\setlength{\parskip}{\baselineskip}
+\newcommand{\divider}{\rule{\textwidth}{1pt}}
+\let\oldpar\par
+\renewcommand{\par}{\oldpar\divider}
+
+\usepackage{lettrine}
+\usepackage{everypar}
+\newcommand{\chapstart}{\everypar{\setbox0=\lastbox}\scshape\lettrine[lines=3, findent=4pt, nindent=0pt]{}{}}
+
+
+\begin{document}
+
+\frontmatter
+
+\begin{titlepage}
+\centering
+\includegraphics[width=3in]{cover.jpg}\\[1cm]
+\textbf{\Huge Title of Your Book}\\[1cm]
+\textbf{\Large Author Name}\\[2cm]
+\textbf{\large Urban Fantasy}\\[2cm]
+\textbf{\small Publisher Name}\\[3cm]
+\end{titlepage}
+
+\markboth{Author Name}{Title of Your Book}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Copyright \textcopyright2022}\\[1cm]
+\textbf{\small ISBN: xxxxxxxxxx}\\[1cm]
+\textbf{\small All rights reserved.}\\[2cm]
+\vspace*{\fill}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Dedication}\\[1cm]
+\textit{This book is dedicated to my family, who have always supported me in my writing.}\\[2cm]
+\vspace*{\fill}
+
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Epigraph}\\[1cm]
+\textit{``The world is full of magic things, patiently waiting for our senses to grow sharper.” - W.B. Yeats}\\[2cm]
+\vspace*{\fill}
+
+\tableofcontents
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Preface}\\[1cm]
+\textit{This book is a work of fiction. The characters, incidents, and dialogue are drawn from the author's imagination and are not to be construed as real. Any resemblance to actual events or persons, living or dead, is entirely coincidental.}\\[2cm]
+\vspace*{\fill}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Foreword}\\[1cm]
+\textit{This book is a must-read for all urban fantasy fans. The author has created a rich and intricate world filled with magic and adventure. I highly recommend this book to anyone looking for a thrilling and immersive read.}\\[2cm]
+\vspace*{\fill}
+
+\mainmatter
+\let\cleardoublepage\clearpage
+\let\clearpage\relax
+\openright
+
+\chapter{Chapter 1}
+\chapstart{L}orem Ipsum
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Acknowledgments}\\[1cm]
+\textit{I would like to thank my editor, beta readers, and family for their support and encouragement throughout the writing process.}\\[2cm]
+\vspace*{\fill}
+
+\backmatter
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Glossary}\\[1cm]
+\textit{Here you can include a list of terms and their definitions that are specific to your book.}\\[2cm]
+\vspace*{\fill}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large Bibliography}\\[1cm]
+\textit{Here you can include a list of sources that you used or referenced while writing your book.}\\[2cm]
+\vspace*{\fill}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\textbf{\Large About the Author}\\[1cm]
+\textit{Here you can include information about yourself as the author, such as your background, writing experience, and other relevant information
+
+\textit{Here you can include information about yourself as the author, such as your background, writing experience, and other relevant information.}\\[2cm]
+\vspace*{\fill}
+
+\end{document}

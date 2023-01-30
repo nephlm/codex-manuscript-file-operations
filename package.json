@@ -1,25 +1,83 @@
 {
-  "name": "codex-files-by-number",
-  "displayName": "codex-files-by-number",
-  "description": "A VSCode extension to help maintain an aritrary order of files by using a numeric prefix.",
-  "version": "0.0.1",
+  "name": "codex-manuscript-file-operations",
+  "displayName": "Codex Files By Number",
+  "description": "A VSCode extension to help maintain an arbitrary order of files by using a numeric prefix.",
+  "version": "0.2.1",
+  "publisher": "ZenBrewismBooks",
+  "repository": "https://github.com/nephlm/codex-manuscript-file-operations.git",
+  "icon": "logo_128.png",
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:codex-files-by-number.helloWorld"
+  "keywords": [
+    "writers",
+    "writing",
+    "books",
+    "book",
+    "author",
+    "files",
+    "file order",
+    "rename",
+    "novel"
   ],
-  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:codex-manuscript-file-operations.rename",
+    "onCommand:codex-manuscript-file-operations.rename-document-root",
+    "onCommand:codex-manuscript-file-operations.set-document-root",
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "codex-files-by-number.helloWorld",
-        "title": "Hello World"
+        "command": "codex-manuscript-file-operations.rename",
+        "title": "Codex Files By Number Rename"
+      },
+      {
+        "command": "codex-manuscript-file-operations.rename-document-root",
+        "title": "Codex Document Root Files By Number Rename"
+      },
+      {
+        "command": "codex-manuscript-file-operations.set-document-root",
+        "title": "Codex Set Document Root"
+      },
+      {
+        "command": "codex-manuscript-file-operations.split-file",
+        "title": "Codex Split File At Cursor"
+      },
+      {
+        "command": "codex-manuscript-file-operations.split-file-selection",
+        "title": "Codex Split Selection to New File"
+      },
+      {
+        "command": "codex-manuscript-file-operations.merge-files",
+        "title": "Codex Merge Files"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "codex-manuscript-file-operations.merge-files",
+          "when": "explorerViewletFocus && explorerViewletFocus",
+          "group": "3_fullEdit"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "codex-manuscript-file-operations.split-file",
+          "when": "editorTextFocus && !editorReadonly && !editorHasSelection",
+          "group": "3_fullEdit"
+        },
+        {
+          "command": "codex-manuscript-file-operations.split-file-selection",
+          "when": "editorTextFocus && !editorReadonly && editorHasSelection",
+          "group": "3_fullEdit"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

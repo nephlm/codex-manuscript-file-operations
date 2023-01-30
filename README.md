@@ -1,71 +1,36 @@
-# codex-files-by-number README
+# Words
 
-This is the README for your extension "codex-files-by-number". After writing up a brief description, we recommend including the following sections.
+One of the rough edges of using VSCode as a writing platform is that fact that you cannot arbitrarily order files, your builtin choices are only lexicographic and how to intermix files and directories.  
 
-## Features
+This isn't terribly difficult to work around, simply add a numeric prefix to each file.  In variably a file will need to be split, merged or a forgotten scene will present itself.  As long as the seperator between the number and file name is one of the 8 characters ( -,;:!?_) that are sorted before the decimal point ".", you can insert decimal numbers and it will sort properly.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+```
+1-Scene.md
+1.5-A forgotten scene.md
+2-the continuation.md
+```
 
-For example if there is an image subfolder under your extension project workspace:
+This leaves two problems: You're more of an exploratory writer and end up with a file called `5.434-important_scene.md` and `9-scene.md` and `10-scene.md` don't sort properly, and you were sure you weren't going to have 10 scenes, so the numbers aren't zero padded.
 
-\!\[feature X\]\(images/feature-x.png\)
+This extension contributes a command that will turn this
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+```
+10-scene_with_joe_and_amanda.md
+[...]
+9-scene_with_joe.md
+9.5-scene_with_amanda.md
+```
+into this
+```
+[...]
+09-scene_with_joe.md
+10-scene_with_amanda.md
+11-scene_with_joe_and_amanda.md
+```
 
-## Requirements
+It won't rename any file without a numeric prefix, nor any non-numeric part of the name.  It will recursively apply the change to the whole workspace or if `document-root` is set, then the entire document set.  Despite being recursive, each directory is individually renumbered.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+## Limitations
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+* Files starting with "." are not considered numeric, since in most systems that would indicate a hidden file.  Files being placed before the file starting with `1-something.md` must have a leading `0` (e.g. `0.5-prologue.md`)
