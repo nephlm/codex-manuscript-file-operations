@@ -34,27 +34,23 @@
     "commands": [
       {
         "command": "codex-manuscript-file-operations.rename",
-        "title": "Codex Files By Number Rename"
+        "title": "Codex Numeric Rename"
       },
       {
         "command": "codex-manuscript-file-operations.rename-document-root",
-        "title": "Codex Document Root Files By Number Rename"
-      },
-      {
-        "command": "codex-manuscript-file-operations.set-document-root",
-        "title": "Codex Set Document Root"
+        "title": "Codex Document Root numeric Rename"
       },
       {
         "command": "codex-manuscript-file-operations.split-file",
-        "title": "Codex Split File At Cursor"
+        "title": "Split File At Cursor"
       },
       {
         "command": "codex-manuscript-file-operations.split-file-selection",
-        "title": "Codex Split Selection to New File"
+        "title": "Split Selection to New File"
       },
       {
         "command": "codex-manuscript-file-operations.merge-files",
-        "title": "Codex Merge Files"
+        "title": "Merge Files"
       }
     ],
     "menus": {
