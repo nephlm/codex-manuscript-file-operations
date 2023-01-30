@@ -2,7 +2,7 @@
   "name": "codex-manuscript-file-operations",
   "displayName": "Codex Files By Number",
   "description": "A VSCode extension to help maintain an arbitrary order of files by using a numeric prefix.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publisher": "ZenBrewismBooks",
   "repository": "https://github.com/nephlm/codex-manuscript-file-operations.git",
   "icon": "logo_128.png",
