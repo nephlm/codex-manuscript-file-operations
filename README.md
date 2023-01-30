@@ -98,3 +98,7 @@ Automatically take a snapshot of the manuscript every interval and store it on a
 ## Authors
 
 - [@nephlm](https://www.github.com/nephlm)
+
+## Logo
+
+by [Delapuite](https://game-icons.net/1x1/delapouite/book-pile.html) under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
