@@ -1,9 +1,8 @@
 # Change Log
 
-All notable changes to the "codex-manuscript-file-operations" extension will be documented in this file.
+## [0.2.1]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial extension generation
+- MVP complete.
+- Merge files
+- Split file at cursor/selection
+- Rename operation for selection or document root.

@@ -33,9 +33,13 @@ button.
 
 To merge two or more files, select them in the explorer and right click.  Select the `Merge Files` option, all the selected files will be merged into the first file.  All other files will be deleted.
 
+<img src="https://raw.githubusercontent.com/nephlm/codex-manuscript-file-operations/main/merge-menu-image.png" width=300px>
+
 ### Split
 
 While editing a document, right click.  If you have text selected you will see `Split Selection to New File`, otherwise you'll see `Split File At Cursor`.  
+
+<img src="https://raw.githubusercontent.com/nephlm/codex-manuscript-file-operations/main/split-menu-image.png" width=280px>
 
 The only difference between the two commands is what gets split in the newfile, either the selected text or all text after the cursor position to the end of the file.
 
@@ -46,6 +50,9 @@ This feature is only available in the command palette, unless you choose to assi
 There are two commands; `Codex Numeric Rename` and `Codex Document Root Rename`.  `Codex Numeric Rename` will ask you to select a directory from the file picker, while `Codex Document Root Rename` will use the Document Root set in the [Codex Manuscript Wordcount](https://marketplace.visualstudio.com/items?itemName=ZenBrewismBooks.codex-manuscript-wordcount), if installed, otherwise it won't run.  
 
 This operation will recursively rename files and directories so that within a directory, each file that had a numeric prefix, will have an integer prefix with `zero (0)` padding, so all numbers are of consistent length, without changing the order of the files.
+
+<img src="https://raw.githubusercontent.com/nephlm/codex-manuscript-file-operations/main/before.png">
+<img src="https://raw.githubusercontent.com/nephlm/codex-manuscript-file-operations/main/after.png">
 
 It will have no effect on files without a numeric prefix, though their paths may change if the directory containing those files have a numeric prefix and gets renamed.  
 
