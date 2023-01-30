@@ -8,5 +8,5 @@ vsc-extension-quickstart.md
 **/*.map
 *.svg
 logo_512.png
-*.tex
-conditional_config.js
+**/*.tex
+src/conditional_config.js
